@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import pp from "..//components/pp.png"
+import pp from "../images/pp.png"
 
 function Hero() {
   useEffect(() => {
@@ -12,7 +12,7 @@ function Hero() {
     <div className="relative min-h-screen bg-gradient-to-r from-pink-300 to-blue-300 overflow-hidden">
       
       {/* Navbar */}
-      <nav className=" flex justify-center items-center space-x-8 pt-8 text-sm tracking-wide uppercase text-black font-semibold z-10 relative">
+      <nav className=" flex justify-center items-center space-x-8 text-sm tracking-wide uppercase text-black font-semibold z-10 relative pt-8">
         <a href="#home" className="hover:underline">Home</a>
         <a href="#contact" className="hover:underline ">Contact</a>
       </nav>
@@ -33,13 +33,6 @@ function Hero() {
           />
         </div>
       </div>
-
-      {/* Bottom Shape */}
-      {/* <div className="absolute bottom-0 left-0 w-full">
-        <svg viewBox="0 0 1440 150" className="w-full h-24 md:h-32">
-          <path fill="#ffffff" d="M0,100 L1440,0 L1480,150 L0,150 Y"></path>
-        </svg>
-      </div> */}
     </div>
   );
 }

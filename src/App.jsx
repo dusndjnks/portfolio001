@@ -3,6 +3,7 @@ import { useState , useEffect } from 'react'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Hero from './components/Hero';
+import Navbar from './components/Navbar';
 
 
 const App = () => {
@@ -14,17 +15,16 @@ const App = () => {
   
   return (
     <div>
-
-<section 
-      className="relative min-h-screen flex items-center justify-center bg-gray-900 bg-opacity-60 text-white"
-      style={{
+  <section className="relative min-h-screen flex items-center justify-center bg-gray-900 bg-opacity-60 text-white" style={{
         backgroundImage: "url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')",
         backgroundSize: 'cover',
         backgroundPosition: 'center'
       }}
     >
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+      <div className="absolute inset-0 bg-black bg-opacity-40">
+        <Navbar/>
+      </div>
       
       {/* Content */}
       <div className="text-center px-4 z-10">
@@ -41,7 +41,7 @@ const App = () => {
       </div>
     </section>
 
-      <div className="bg-gray-50  text-gray-800 scroll-smooth my-20">
+      <div className="bg-gray-50  text-gray-800 scroll-smooth ">
       <nav className="sticky top-0 w-full bg-white shadow-md z-50">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
           <h1 className="text-xl font-bold">Seaside Strength</h1>
@@ -51,7 +51,7 @@ const App = () => {
         </div>
       </nav>
 
-      <section id="home" className="min-h-screen flex flex-col-reverse md:flex-row justify-center items-center text-center px-4 pt-20 md:pt-32 lg:px-28 ">
+      <section id="home" className="min-h-screen flex flex-col-reverse md:flex-row justify-center items-center text-center px-4 py-20 md:pt-32 lg:px-28 gap-8">
         <div className="md:w-1/2 flex flex-col items-start " data-aos="fade-up">
           <h2 className="text-4xl md:text-6xl font-bold mb-4">
             Hello, I'm <span className="text-blue-500">Your Name</span>
@@ -67,11 +67,8 @@ const App = () => {
         </div>
       </section>
     </div>
-
       
     <Hero/>
-
-
 
     </div>
   )
